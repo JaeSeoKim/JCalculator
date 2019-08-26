@@ -1,4 +1,4 @@
-package com.jaeseokim;
+package jaeseokim.JCalculator;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -91,8 +91,8 @@ public class MakeCalculator extends JFrame implements ActionListener{
 			break;
 		case "=":
 			sum = tf.getText();
-			String nums[] = sum.split("\\s*[+|-|*|/]+");
-			sum = sum.replaceAll("[0-9]", "");
+			String nums[] = sum.split("\\s*[+|[-]|*|/]+");
+			sum = sum.replaceAll("[0-9|.]", "");
 			String symbols[] = sum.split(" ");
 			double answer = Double.parseDouble(nums[0]);
 			for(int i =0; i<symbols.length;i++) {
